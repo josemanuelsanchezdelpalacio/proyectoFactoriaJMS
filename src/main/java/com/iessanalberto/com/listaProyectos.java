@@ -18,4 +18,5 @@ public class listaProyectos {
     public void setProyectos(ArrayList<Proyecto> proyectos) {
         this.proyectos = proyectos;
     }
+
 }
