@@ -4,26 +4,24 @@ import jakarta.xml.bind.annotation.*;
 
 import java.util.ArrayList;
 
-@XmlRootElement(name = "proyectos")
-@XmlType(propOrder = {"participantes", "tags", "familias", "descripcion", "coordinador", "valoracion", "estado", "visibilidad"})
+@XmlRootElement(name = "proyecto")
+@XmlType(propOrder = {"titulo","participantes", "tags", "familias", "descripcion", "coordinador", "valoracion", "estado", "visibilidad"})
 
-public class Proyectos {
+public class Proyecto {
 
-    ArrayList<String> participantes;
-    ArrayList<String> tags;
-    ArrayList<String> familiaImplicadas;
+    ArrayList<String> participantes, tags, familias;
     String titulo, descripcion, coordinador;
-    com.iessanalberto.com.Valoracion valoracion;
+    Valoracion valoracion;
     Boolean estado, visibilidad;
 
-    public Proyectos() {
+    public Proyecto() {
 
     }
 
-    public Proyectos(ArrayList<String> participantes, ArrayList<String> tags, ArrayList<String> familiaImplicadas, String titulo, String descripcion, String coordinador, Valoracion valoracion, Boolean estado, Boolean visibilidad) {
+    public Proyecto(ArrayList<String> participantes, ArrayList<String> tags, ArrayList<String> familiaImplicadas, String titulo, String descripcion, String coordinador, Valoracion valoracion, Boolean estado, Boolean visibilidad) {
         this.participantes = participantes;
         this.tags = tags;
-        this.familiaImplicadas = familiaImplicadas;
+        this.familias = familiaImplicadas;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.coordinador = coordinador;
@@ -31,6 +29,7 @@ public class Proyectos {
         this.estado = estado;
         this.visibilidad = visibilidad;
     }
+
 
     @XmlElement(name = "participante")
     @XmlElementWrapper(name = "participantes")
@@ -46,11 +45,11 @@ public class Proyectos {
 
     @XmlElement(name = "familia")
     @XmlElementWrapper(name = "familias")
-    public ArrayList<String> getFamiliaImplicadas() {
-        return familiaImplicadas;
+    public ArrayList<String> getFamilias() {
+        return familias;
     }
 
-    @XmlAttribute(name = "titulo")
+    @XmlElement(name = "titulo")
     public String getTitulo() {
         return titulo;
     }
@@ -89,8 +88,8 @@ public class Proyectos {
         this.tags = tags;
     }
 
-    public void setFamiliaImplicadas(ArrayList<String> familiaImplicadas) {
-        this.familiaImplicadas = familiaImplicadas;
+    public void setFamilias(ArrayList<String> familias) {
+        this.familias = familias;
     }
 
     public void setTitulo(String titulo) {
