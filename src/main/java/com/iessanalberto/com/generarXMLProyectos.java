@@ -8,7 +8,7 @@ import java.io.File;
 import java.util.ArrayList;
 
 
-public class generarXML {
+public class generarXMLProyectos {
     public static void main(String[] args) {
         listaProyectos objetoProyecto = new listaProyectos();
         ArrayList<Proyecto> proyectos = new ArrayList<>();

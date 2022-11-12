@@ -1,22 +1,25 @@
 package com.iessanalberto.com;
 
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
+
+import java.util.ArrayList;
 
 @XmlRootElement(name="alumno")
 @XmlType(propOrder={"centro", "rol", "nombre", "contrasenia", "puntuacion", "familiaProfesional", "contacto", "proyectos"})
 
 public class Alumno {
 
-	private Centros centro;
+	private ArrayList<Centros> centro;
 	private String rol, nombre, contrasenia, contacto, familiaProfesional;
 	private Double puntuacion;
-	private Proyecto proyectos;
+	private ArrayList<Proyecto> proyectos;
 	
 	public Alumno() {}
 
-	public Alumno(Centros centro, String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, Proyecto proyectos) {
+	public Alumno(ArrayList<Centros> centro, String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos) {
 		this.centro = centro;
 		this.rol = rol;
 		this.nombre = nombre;
@@ -27,11 +30,12 @@ public class Alumno {
 		this.proyectos = proyectos;
 	}
 
+	@XmlElementWrapper(name="centros")
 	@XmlElement(name="centro")
-	public Centros getCentro() {
+	public ArrayList<Centros> getCentro() {
 		return centro;
 	}
-	public void setCentro(Centros centro) {
+	public void setCentro(ArrayList<Centros> centro) {
 		this.centro = centro;
 	}
 	
@@ -83,11 +87,12 @@ public class Alumno {
 		this.puntuacion = puntuacion;
 	}
 
-	@XmlElement(name="proyectos")
-	public Proyecto getProyectos() {
+	@XmlElementWrapper(name="proyectos")
+	@XmlElement(name="proyecto")
+	public ArrayList<Proyecto> getProyectos() {
 		return proyectos;
 	}
-	public void setProyectos(Proyecto proyectos) {
+	public void setProyectos(ArrayList<Proyecto> proyectos) {
 		this.proyectos = proyectos;
 	}
 	

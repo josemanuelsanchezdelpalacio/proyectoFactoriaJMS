@@ -15,13 +15,13 @@ public class Usuario {
 	private String rol, nombre, contrasenia, contacto;
 	private Double puntuacion;
 	private String familiaProfesional;
-	private Proyecto proyectos;
+	private ArrayList<Proyecto> proyectos;
 	private ArrayList<Alumno> alumnos;
 	private ArrayList<Profesor> profesores;
 
 	public Usuario() {}
 	
-	public Usuario(String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, Proyecto proyectos, ArrayList<Alumno> alumnos, ArrayList<Profesor> profesores) {
+	public Usuario(String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos, ArrayList<Alumno> alumnos, ArrayList<Profesor> profesores) {
 		this.rol = rol;
 		this.nombre = nombre;
 		this.contrasenia = contrasenia;
@@ -81,11 +81,12 @@ public class Usuario {
 		this.puntuacion = puntuacion;
 	}
 
-	@XmlElement(name="proyectos")
-	public Proyecto getProyectos() {
+	@XmlElementWrapper(name="proyectos")
+	@XmlElement(name="proyecto")
+	public ArrayList<Proyecto> getProyectos() {
 		return proyectos;
 	}
-	public void setProyectos(Proyecto proyectos) {
+	public void setProyectos(ArrayList<Proyecto> proyectos) {
 		this.proyectos = proyectos;
 	}
 

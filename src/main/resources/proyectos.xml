@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <proyectos>
-    <proyecto titulo="1">
+    <proyectos titulo="1">
         <participantes>
             <participante>Alvaro</participante>
         </participantes>
@@ -18,5 +18,5 @@
         </valoracion>
         <estado>true</estado>
         <visibilidad>true</visibilidad>
-    </proyecto>
+    </proyectos>
 </proyectos>

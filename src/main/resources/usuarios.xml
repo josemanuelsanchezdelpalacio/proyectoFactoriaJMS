@@ -8,33 +8,43 @@
 	<puntuacion>1.0</puntuacion>
 	<familiaProfesional></familiaProfesional>
 	<contacto>CONTACTO@GMAIL.COM</contacto>
-	<proyectos></proyectos>
+	<proyectos>
+		<proyecto></proyecto>
+	</proyectos>
 
 	//datos alumnos
 	<alumnos>
 		<alumno>
-			<centro></centro>
+			<centros>
+				<centro></centro>
+			</centros>
 			<rol>ROL-ALUMNO</rol>
 			<nombre>NOMBREALUMNO</nombre>
 			<contrasenia>CONTRA-5710</contrasenia>
 			<puntuacion>1.0</puntuacion>
 			<familiaProfesional></familiaProfesional>
 			<contacto>CONTACTOALUMNO@GMAIL.COM</contacto>
-			<proyectos></proyectos>
+			<proyectos>
+				<proyecto></proyecto>
+			</proyectos>
 		</alumno>
 	</alumnos>
 	
 	//datos profesores
 	<profesores>
 		<profesor>
-			<centro></centro>
+			<centros>
+				<centro></centro>
+			</centros>
 			<rol>ROL-PROFESOR</rol>
 			<nombre>NOMBREPROFESOR</nombre>
 			<contrasenia>CONTRA-4170</contrasenia>
 			<puntuacion>1.0</puntuacion>
 			<familiaProfesional></familiaProfesional>
 			<contacto>CONTACTOPROFESOR@GMAIL.COM</contacto>
-			<proyectos></proyectos>
+			<proyectos>
+				<proyecto></proyecto>
+			</proyectos>
 		</profesor>
 	</profesores>
 </usuarios>

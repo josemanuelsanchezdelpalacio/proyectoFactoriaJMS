@@ -1,8 +1,11 @@
 package com.iessanalberto.com;
 
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
+
+import java.util.ArrayList;
 
 @XmlRootElement(name="centro")
 @XmlType(propOrder= {"nombre","proyecto","web","contacto","profesor","familia_Profesional","alumno"})
@@ -11,11 +14,11 @@ public class Centros {
 
     private String nombre, web, familia_Profesional;
     private int contacto;
-    private Proyecto proyecto;
-    private Profesor profesores;
-    private Alumno alumno;
+    private ArrayList<Proyecto> proyecto;
+    private ArrayList<Profesor> profesores;
+    private ArrayList<Alumno> alumno;
 
-    public Centros(String nombre, String web, String familia_Profesional, int contacto, Proyecto proyecto, Profesor profesores, Alumno alumno) {
+    public Centros(String nombre, String web, String familia_Profesional, int contacto, ArrayList<Proyecto> proyecto, ArrayList<Profesor> profesores, ArrayList<Alumno> alumno) {
         super();
         this.nombre = nombre;
         this.web = web;
@@ -36,11 +39,12 @@ public class Centros {
         this.nombre = nombre;
     }
 
+    @XmlElementWrapper(name="proyectos")
     @XmlElement(name="proyecto")
-    public Proyecto getProyecto() {
+    public ArrayList<Proyecto> getProyecto() {
         return proyecto;
     }
-    public void setProyecto(Proyecto proyecto) {
+    public void setProyecto(ArrayList<Proyecto> proyecto) {
         this.proyecto = proyecto;
     }
 
@@ -60,11 +64,12 @@ public class Centros {
         this.contacto = contacto;
     }
 
+    @XmlElementWrapper(name="profesores")
     @XmlElement(name="profesor")
-    public Profesor getProfesor() {
+    public ArrayList<Profesor> getProfesor() {
         return profesores;
     }
-    public void setProfesor(Profesor profesores) {
+    public void setProfesor(ArrayList<Profesor> profesores) {
         this.profesores = profesores;
     }
 
@@ -76,11 +81,12 @@ public class Centros {
         this.familia_Profesional = familia_Profesional;
     }
 
+    @XmlElementWrapper(name="alumnos")
     @XmlElement(name="alumno")
-    public Alumno getAlumno() {
+    public ArrayList<Alumno> getAlumno() {
         return alumno;
     }
-    public void setAlumno(Alumno alumno) {
+    public void setAlumno(ArrayList<Alumno> alumno) {
         this.alumno = alumno;
     }
 }
