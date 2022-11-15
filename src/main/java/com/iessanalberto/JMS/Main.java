@@ -1,4 +1,4 @@
-package com.iessanalberto.com;
+package com.iessanalberto.JMS;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

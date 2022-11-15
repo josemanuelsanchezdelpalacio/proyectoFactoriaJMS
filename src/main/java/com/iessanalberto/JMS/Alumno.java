@@ -1,4 +1,4 @@
-package com.iessanalberto.com;
+package com.iessanalberto.JMS;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
@@ -7,19 +7,19 @@ import jakarta.xml.bind.annotation.XmlType;
 
 import java.util.ArrayList;
 
-@XmlRootElement(name="profesor")
+@XmlRootElement(name="alumno")
 @XmlType(propOrder={"centro", "rol", "nombre", "contrasenia", "puntuacion", "familiaProfesional", "contacto", "proyectos"})
 
-public class Profesor {
+public class Alumno {
 
 	private ArrayList<Centros> centro;
 	private String rol, nombre, contrasenia, contacto, familiaProfesional;
 	private Double puntuacion;
 	private ArrayList<Proyecto> proyectos;
 	
-	public Profesor() {}
+	public Alumno() {}
 
-	public Profesor(ArrayList<Centros> centro, String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos) {
+	public Alumno(ArrayList<Centros> centro, String rol, String nombre, String contrasenia, String familiaProfesional, String contacto, Double puntuacion, ArrayList<Proyecto> proyectos) {
 		this.centro = centro;
 		this.rol = rol;
 		this.nombre = nombre;
@@ -95,4 +95,5 @@ public class Profesor {
 	public void setProyectos(ArrayList<Proyecto> proyectos) {
 		this.proyectos = proyectos;
 	}
+	
 }

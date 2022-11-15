@@ -1,4 +1,4 @@
-package com.iessanalberto.com;
+package com.iessanalberto.JMS;
 
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;

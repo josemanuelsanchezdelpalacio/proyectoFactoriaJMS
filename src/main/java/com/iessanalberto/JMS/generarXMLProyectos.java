@@ -1,4 +1,4 @@
-package com.iessanalberto.com;
+package com.iessanalberto.JMS;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
