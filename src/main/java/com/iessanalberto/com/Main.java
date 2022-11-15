@@ -21,9 +21,9 @@ public class Main {
         Usuario listaUsuarios;
         Centros listaCentros;
 
-        listaProyectos = (com.iessanalberto.com.listaProyectos) unmarshaller.unmarshal(new File("src/main/resources/proyectos.xml"));
-        listaUsuarios = (com.iessanalberto.com.Usuario) unmarshaller.unmarshal(new File("src/main/resources/usuarios.xml"));
-        listaCentros = (com.iessanalberto.com.Centros) unmarshaller.unmarshal(new File("src/main/resources/centros.xml"));
+        listaProyectos = (listaProyectos) unmarshaller.unmarshal(new File("src/main/resources/proyectos.xml"));
+        listaUsuarios = (Usuario) unmarshaller.unmarshal(new File("src/main/resources/usuarios.xml"));
+        listaCentros = (Centros) unmarshaller.unmarshal(new File("src/main/resources/centros.xml"));
 
         Path pathProyecto = Path.of("target/Proyecto.json");
         Path pathUsuario = Path.of("target/Usuario.json");
